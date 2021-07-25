@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="home/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="home/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home/css/magnific-popup.css">
+    <link rel="stylesheet" href="home/css/jquery-ui.css">
+    <link rel="stylesheet" href="home/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="home/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="home/css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="home/fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="home/css/aos.css">
+    <link rel="stylesheet" href="home/css/rangeslider.css">
+
+    <link rel="stylesheet" href="home/css/style.css">
+
+</head>
+<style>
+    input[type=text] /* attribute type css*/
+   { width: 300px;
+    height: 50px;
+   }
+   input:focus{ /*chages occur when clicked*/
+    background-color: burlywood;
+}
+
+    .site-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        animation: animate 16s ease-in-out infinite;
+        background-size: cover;
+        background-size: 100% 100%;
+
+
+    }
+
+    @keyframes animate {
+
+        0%,
+        100% {
+            background-image: url('baby2.jpg');
+        }
+
+        25% {
+            background-image: url('baby3.jpg');
+        }
+
+        50% {
+            background-image: url('baby5.jpg');
+        }
+
+        75% {
+            background-image: url('baby.jpg');
+        }
+    }
+    .outer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .div1 {
+        position: relative;
+        top: 200px;
+    }
+    .switch {
+    position: relative;
+    right: 30px;
+    height: 26px;
+    width: 120px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  .switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 58px;
+    line-height: 26px;
+    font-size: 11px;
+  /*  color: rgba(255, 255, 255, 0.35);*/
+  color: white;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+  }
+  .switch-label:active {
+    font-weight: bold;
+  }
+  
+  .switch-label-off {
+    padding-left: 2px;
+  }
+  
+  .switch-label-on {
+    padding-right: 2px;
+  }
+  
+  
+  .switch-input {
+    display: none;
+  }
+  .switch-input:checked + .switch-label {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.65);
+   /* text-shadow: 0 1px rgba(255, 255, 255, 0.25);*/
+   text-shadow: 0 1px rgba(0, 0, 0, 0.25);
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -ms-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+    transition: 0.15s ease-out;
+    -webkit-transition-property: color, text-shadow;
+    -moz-transition-property: color, text-shadow;
+    -ms-transition-property: color, text-shadow;
+    -o-transition-property: color, text-shadow;
+    transition-property: color, text-shadow;
+  }
+  .switch-input:checked + .switch-label-on ~ .switch-selection {
+    left: 60px;
+    /* Note: left: 50%; doesn't transition in WebKit */
+  }
+  
+  .switch-selection {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    display: block;
+    width: 58px;
+    height: 22px;
+    border-radius: 3px;
+    background-color: #65bd63;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9dd993), color-stop(100%, #65bd63));
+    background-image: -webkit-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -moz-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -ms-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -o-linear-gradient(top, #9dd993, #65bd63);
+    background-image: linear-gradient(top, #9dd993, #65bd63);
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -ms-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+  }
+  .switch-blue .switch-selection {
+    background-color: #3aa2d0;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4fc9ee), color-stop(100%, #3aa2d0));
+    background-image: -webkit-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: -moz-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: -ms-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: -o-linear-gradient(top, #4fc9ee, #3aa2d0);
+    background-image: linear-gradient(top, #4fc9ee, #3aa2d0);
+  }
+  .switch-yellow .switch-selection {
+    background-color: #c4bb61;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0dd94), color-stop(100%, #c4bb61));
+    background-image: -webkit-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: -moz-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: -ms-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: -o-linear-gradient(top, #e0dd94, #c4bb61);
+    background-image: linear-gradient(top, #e0dd94, #c4bb61);
+  }
+  .slidecontainer {
+      width: 200px;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 25px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider:hover {
+      opacity: 1;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+    .form1{
+        align-content: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    }
+    .b1{
+    color: rgb(0, 0, 0)!important;
+    background-color: rgb(255, 255, 255)!important;
+    border-radius: 10px!important;
+   
+}
+.b1:hover{
+    background-color: burlywood!important;
+}
+.h{
+    color: black;
+    font-weight: bold;
+    font-size: 45px;
+}
+</style>
+
+<body>
+    <div class="site-wrap">
+        <div class="outer">
+
+        <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+        <header class="site-navbar" role="banner">
+
+            <div class="container">
+                <div class="row align-items-center">
+                    
+
+                    <div class="col-11 col-xl-2">
+                        <br>
+                    <br>
+                        <h1 class="mb-0 site-logo"><a href="#" class="text-white h2 mb-0"><img
+                                    src="sam.png" width="180px"></a></h1>
+                    </div>
+                    <div class="col-12 col-md-10 d-none d-xl-block" style="position: relative; top: -50px;">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+
+                            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <!--<li class="active"><a href="index.html"><span>Home</span></a></li>-->
+                                <li><a href="latest_names.html"><span>Latest Names</span></a></li>
+                                <li><a href="search.html"><span>Name Meanings</span></a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: -50px;">
+                        <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span
+                                class="icon-menu h3"></span></a></div>
+
+                </div>
+
+            </div>
+    </div>
+
+    </header>
+
+
+    <!-- <div class="site-blocks-cover overlay" style="background-image: url(home/images/home6.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">-->
+    <div class="container div1">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-12 text-center">
+                        <h1 class="h" data-aos="fade-up">Find the <span class="typed-words"></span></h1>
+                    </div>
+                </div>
+
+                <div class="form-search-wrap p-2" data-aos="fade-up" data-aos-delay="20">
+                    <form method="post" align="center" class="form1">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <table>
+                                    <tr>
+                                        <td>Enter Father Name :</td>
+                                        <td>
+                                            <input type="text" id="fname" name="fname" placeholder="Father's Name"
+                                                required="required"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <table>
+                                    <tr><td>Enter Mother Name :</td>
+                                        <td>
+                                            <input type="text" id="mname" name="mname" placeholder="Mother's Name"
+                                                required="required"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                                <table align="center">
+                                    <tr>
+                                        <td>Select Gender :</td>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                                        <td>
+                                            <div class="switch">
+                                                <input type="radio" class="switch-input" name="view" value="boy" id="week"
+                                                    checked>
+                                                <label for="week" class="switch-label switch-label-off">Boy</label>
+                                                <input type="radio" class="switch-input" name="view" value="girl"
+                                                    id="month">
+                                                <label for="month" class="switch-label switch-label-on">Girl</label>
+                                                <span class="switch-selection"></span>
+                                            </div>
+    
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12 align="center">
+                                <table  align="center">
+                                    <tr>
+                                        <td>Lenght of Name :</td>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                                        <td>
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="50" value="1" class="slider" id="min">
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12 align="center">
+                               <input type="button"  class="btn b1" value="Submit" onclick="return validate()">
+                            </div>
+                           </div>
+                            <div id="demo">
+                            </div>
+                            <p id="demo2"></p>
+                            <p id="result"></p>
+                 </div>
+                    </form>
+        </div>
+        </div>
+
+
+
+    <script>
+      function validate() {
+        var a1 = document.getElementById('fname').value;
+        var b1 = document.getElementById('mname').value;
+        var a=a1.toLowerCase();
+        var b=b1.toLowerCase();
+        var c = document.getElementById('min').value;
+        var d = document.getElementsByName('view');
+        var e="";
+        for(i = 0; i < d.length; i++) { 
+                if(d[i].checked) 
+                {
+                document.getElementById("result").innerHTML
+                        = "Gender: "+d[i].value; 
+                e+= d[i].value;
+                }
+            }
+    function capital_letter(str) 
+{
+    str = str.split(" ");
+
+    for (var i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" ");
+} 
+       
+       if(e=='boy')
+       {
+        var a_len = a.length;
+        var b_len = b.length;
+        var comb1 = "", comb2 = "", comb3 = "", comb4 = "";
+        var max_len = a_len + b_len;
+        console.log(d);
+        if ((a == "" && b == "")) {
+            alert("Please Enter details");
+
+        }
+        else if (c > max_len) {
+            alert("Lenght of string is beyond limit");
+        }
+        else if (c % 2 == 0) {
+            var i = c / 2;
+            var k = 0;
+            var first = "";
+            var second = "";
+            for (k = 0; k < i; k++) {
+
+                first += a[k];
+
+            }
+            for (k = 0; k < i; k++) {
+
+                second += b[k];
+
+            }
+             var combo1 = first + second;
+             comb1 = capital_letter(combo1);
+            first = "";
+            second = "";
+
+            for (k = a_len - i; k < a_len; k++) {
+                second += a[k];
+            }
+            for (k = 0; k < i; k++) {
+                first += b[k];
+            }
+
+            var combo2 = first + second;
+            comb2 = capital_letter(combo2);
+
+
+            first = "";
+            second = "";
+            for (k = 0; k < i; k++) {
+                first += a[k];
+            }
+            for (k = b_len - i; k < b_len; k++) {
+                second += b[k];
+            }
+
+             var combo3 = first + second;
+             comb3 = capital_letter(combo3);
+
+            first = "";
+            second = "";
+            for (k = a_len - i; k < a_len; k++) {
+                first += a[k];
+            }
+            for (k = b_len - i; k < b_len; k++) {
+                second += b[k];
+            }
+             var combo4 = first + second;
+             comb4 = capital_letter(combo4);
+
+            first = "";
+            second = "";
+
+            document.getElementById("demo").innerHTML ="The Name of Your Prince Could be : ' "+ comb1 + "  " + comb2 + "  " + comb3 + "  " + comb4+ " '";
+            document.getElementById("demo2").innerHTML ="<html>You Can also Find the<a>Names Meaning.</a></html>";
+
+        }
+        else {
+            var i = parseInt(c / 2);
+
+            var k = 0;
+            var first = "";
+            var second = "";
+            for (k = 0; k < i; k++) {
+
+                first += a[k];
+
+            }
+            for (k = 0; k < c - i; k++) {
+
+                second += b[k];
+
+            }
+            var combo1 = first + second;
+            comb1 = capital_letter(combo1);
+
+            first = "";
+            second = "";
+
+            for (k = a_len - i; k < a_len; k++) {
+                second += a[k];
+            }
+            for (k = 0; k < c - i; k++) {
+                first += b[k];
+            }
+
+            var combo2 = first + second;
+             comb2 = capital_letter(combo2);
+            first = "";
+            second = "";
+            for (k = 0; k < c - i; k++) {
+                first += a[k];
+            }
+            for (k = b_len - i; k < b_len; k++) {
+                second += b[k];
+            }
+
+            var combo3 = first + second;
+            comb3 = capital_letter(combo3);
+            first = "";
+            second = "";
+            for (k = a_len - i - 1; k < a_len; k++) {
+                first += a[k];
+            }
+            for (k = b_len - i; k < b_len; k++) {
+                second += b[k];
+            }
+            var combo4 = first + second;
+            comb4 = capital_letter(combo4);
+
+            first = "";
+            second = "";
+
+            document.getElementById("demo").innerHTML ="The Name of Your Prince Could be : ' "+ comb1 + "  " + comb2 + "  " + comb3 + "  " + comb4+ " '";
+
+        }
+
+    }
+
+    else{
+        var a_len = a.length;
+                var b_len = b.length;
+                var comb1="",comb2="",comb3="",comb4="";
+                var max_len = a_len + b_len;
+                //document.write(max_len);
+                if((a=="" && b==""))
+                {
+                    alert("Please Enter details");
+                    
+                }
+                else if (c>max_len){
+                    alert("Lenght of string is beyond limit");
+                }
+                else if(c%2==0)
+                   {
+                       var i=c/2;    
+                       var k=0;
+                       var j= b_len-i;
+                       var first = "";
+                       var second = "";
+                       for(k=0;k<i;k++)
+                       {
+                         
+                         first+=a[k];
+                       
+                       }
+                       for(k=j;k<b_len;k++)
+                       {
+                     
+                       second+=b[k];
+                      
+                       }
+                       var combo1 = first + second;
+                       comb1 = capital_letter(combo1);
+                       first = "";
+                       second = "";
+                     
+                       for(k=a_len-i;k<a_len;k++)
+                       {
+                        first+=a[k];
+                       }
+                       for(k=j;k<b_len;k++)
+                       {
+                           second+=b[k];
+                       }
+                     
+                       var combo2 = first + second;
+                       comb2 = capital_letter(combo2);
+
+                       first = "";
+                       second = "";
+                       for(k=0;k<i-1;k++)
+                       {
+                           first+=a[k];
+                       }
+                       for(k=j-1;k<b_len;k++)
+                       {
+                           second+=b[k];
+                       }
+                  
+                       var combo3 = first + second;
+                       comb3 = capital_letter(combo3);
+
+                       first = "";
+                       second = "";
+                       for(k=a_len-i+1;k<a_len;k++)
+                       {
+                           first+=a[k];
+                       }
+                       for(k=b_len-i-1;k<b_len;k++)
+                       {
+                           second+=b[k];
+                       }
+                       var combo4 = first + second;
+                       comb4 = capital_letter(combo4);
+                       first = "";
+                       second = "";
+
+                       document.getElementById("demo").innerHTML ="The Name of Your Princess Could be : ' "+ comb1 + "  " + comb2 + "  " + comb3 + "  " + comb4+ " '";
+
+                   }
+                   else
+                   {
+                       var i=parseInt(c/2);   
+                       
+                       var k=0;
+                       var first = "";
+                       var second = "";
+                       for(k=0;k<i;k++)
+                       {
+                         
+                         first+=a[k];
+                       
+                       }
+                       for(k=c-i;k<b_len;k++)
+                       {
+                     
+                       second+=b[k];
+                      
+                       }
+                       var combo1 = first + second;
+                       comb1 = capital_letter(combo1);
+
+                       first = "";
+                       second = "";
+                     
+                       for(k=a_len-i;k<a_len;k++)
+                       {
+                        first+=a[k];
+                       }
+                       for(k=c-i;k<b_len;k++)
+                       {
+                           second+=b[k];
+                       }
+                     
+                       var combo2 = first + second;
+                       comb2 = capital_letter(combo2);
+                       first = "";
+                       second = "";
+                       for(k=0;k<c-i;k++)
+                       {
+                           first+=a[k];
+                       }
+                       for(k=b_len-i;k<b_len;k++)
+                       {
+                           second+=b[k];
+                       }
+                  
+                       var combo3 = first + second;
+                       comb3 = capital_letter(combo3);  
+                       first = "";
+                       second = "";
+                       for(k=a_len-i-1;k<a_len;k++)
+                       {
+                           first+=a[k];
+                       }
+                       for(k=b_len-i;k<b_len;k++)
+                       {
+                           second+=b[k];
+                       }
+                       var combo4 = first + second;
+                       comb4 = capital_letter(combo4);
+                       first = "";
+                       second = "";
+
+                       document.getElementById("demo").innerHTML ="The Name of Your Princess Could be : ' "+ comb1 + "  " + comb2 + "  " + comb3 + "  " + comb4+ " '";
+
+                   }
+                   
+                }
+            
+
+    }      
+
+
+    </script>
+    
+    
+
+
+    <script src="home/js/jquery-3.3.1.min.js"></script>
+    <script src="home/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="home/js/jquery-ui.js"></script>
+    <script src="home/js/popper.min.js"></script>
+    <script src="home/js/bootstrap.min.js"></script>
+    <script src="home/js/owl.carousel.min.js"></script>
+    <script src="home/js/jquery.stellar.min.js"></script>
+    <script src="home/js/jquery.countdown.min.js"></script>
+    <script src="home/js/jquery.magnific-popup.min.js"></script>
+    <script src="home/js/bootstrap-datepicker.min.js"></script>
+    <script src="home/js/aos.js"></script>
+    <script src="home/js/rangeslider.min.js"></script>
+
+
+    <script src="home/js/typed.js"></script>
+    <script>
+        var typed = new Typed('.typed-words', {
+            strings: [" Latest Names", " Name Meanings", " Generated Names"],
+            typeSpeed: 80,
+            backSpeed: 80,
+            backDelay: 4000,
+            startDelay: 1000,
+            loop: true,
+            showCursor: true
+        });
+    </script>
+
+    <script src="home/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+    
+    body {
+      background-color: rgb(248, 207, 131) !important;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      position: relative;
+      opacity: 1;
+      width: 100%;
+    }
+
+    li a:hover {
+      display: block;
+      background-color: rgb(126, 126, 126);
+      border-radius: 10px;
+      /* color: black;*/
+    }
+
+    li {
+      padding: 10px;
+    }
+
+    .nav-items a {
+      color: white !important;
+      ;
+      font-weight: bold;
+    }
+
+    .img1 {
+      border-radius: 50%;
+    }
+
+    .nav1 {
+      position: relative;
+      bottom: 50px;
+    }
+
+    #myInput {
+      background-color: rgb(149, 223, 188);
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 70%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+    #myTable {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid rgb(0, 0, 0);
+      font-size: 18px;
+    }
+    #mod {
+      width: 29%;
+      background-color: rgb(112, 116, 116);
+    }
+
+    #myTable th,
+    #myTable td {
+      text-align: left;
+      padding: 12px;
+      color: black;
+      font-weight: bold;
+    }
+
+    input:focus {
+      background-color: rgb(189, 236, 95) !important;
+    }
+
+    #myTable tr {
+      border-bottom: 1px solid black;
+    }
+
+    h2 {
+      color: black;
+      font-weight: bold;
+    }
+
+    #myTable tr.header,
+    #myTable tr:hover {
+      background-color: rgb(149, 223, 188);
+    }
+
+  .tc {
+    position: relative;
+    bottom: 500px;
+    left: 120px;
+  }
+ .b1:hover{
+   background-color: burlywood!important;
+ }
+ .dropdown a{
+   color: black!important;
+   font-weight: bold;
+  }
+  .modal-content{
+    background-color: rgb(179, 189, 209)!important;
+  }
+  .dropdown-menu{
+    background-color: burlywood!important;
+  }
+  .dropdown-menu a:hover{
+    background-color: rgb(141, 145, 143)!important;
+  }
+  input[type=checkbox]{
+      height: 15px;
+      width: 15px;
+      background-color: darkolivegreen!important;
+      color: darkolivegreen;
+  }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light nav1">
+      
+      <br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br>
+          <h1 class="mb-0 site-logo"><a href="#" class="text-white h2 mb-0"><img
+                      src="sam.png" width="180px"></a></h1>      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link font-weight-bold" href="index2.html">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="latest_names.html">Latest Names</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <table align="center" id="tab1">
+      <tr>
+        <td><img src="tenor2.gif" class="img1" height="100px" width="100px"></td>
+        <td><img src="tenor.gif" class="img1" height="100px" width="100px"></td>
+        <td><img src="tenor3.gif" class="img1" height="100px" width="100px"></td>
+
+      </tr>
+    </table>
+    <h2 align="center">Names And Meaning</h2>
+    <br>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    <button type="button" class="btn btn-info btn-lg text-center" id="mod" data-toggle="modal"
+      data-target="#myModal"><i class="fa-2x fa fa-filter" aria-hidden="true"></i>
+    </button>
+
+
+    <table id="myTable">
+      <tr class="header">
+        <th style="width:60%;">Name</th>
+        <th style="width:40%;">Meaning</th>
+      </tr>
+      <tr>
+        <td>Aadarsh</td>
+        <td>One who has principles</td>
+      </tr>
+      <tr>
+        <td>Aadav</td>
+        <td>The sun, bright, powerful, intelligent</td>
+      </tr>
+      <tr>
+        <td>Aadesh</td>
+        <td>Command, Message</td>
+      </tr>
+      <tr>
+        <td>Aadi</td>
+        <td>Important</td>
+      </tr>
+      <tr>
+        <td>Aadit</td>
+        <td>Peak</td>
+      </tr>
+      <tr>
+        <td>Aagney</td>
+        <td>Born from fire</td>
+      </tr>
+      <tr>
+        <td>Alok</td>
+        <td>Enlightenment or Light of divinity</td>
+      </tr>
+      <tr>
+        <td>Aamod</td>
+        <td>Pleasant,accept</td>
+      </tr>
+      <tr>
+        <td>Aadarsh</td>
+        <td>One who has principles</td>
+      </tr>
+      <tr>
+        <td>Aadav</td>
+        <td>The sun, bright, powerful, intelligent</td>
+      </tr>
+      <tr>
+        <td>Aadesh</td>
+        <td>Command, Message</td>
+      </tr>
+      <tr>
+        <td>Aadi</td>
+        <td>Important</td>
+      </tr>
+      <tr>
+        <td>Aadit</td>
+        <td>Peak</td>
+      </tr>
+      <tr>
+        <td>Aagney</td>
+        <td>Born from fire</td>
+      </tr>
+      <tr>
+        <td>Alok</td>
+        <td>Enlightenment or Light of divinity</td>
+      </tr>
+      <tr>
+        <td>Aamod</td>
+        <td>Pleasant,accept</td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Filter By</h4>
+
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p align="center" class="font-weight-bold">Select from the given options</p>
+          <table align="center">
+            <tr>
+              <td>
+                <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle b1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Gender
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Boy" name="gender" id="boy"> Boy</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Girl" name="gender" id="girl"> Girl</a>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle b1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Religion
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Hindu" name="Religion" id="Hindu"> Hindu</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Muslim" name="Religion" id="Muslim"> Muslim</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Sikh" name="Religion" id="Sikh"> Sikh</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Christan" name="Religion" id="Christan"> Christan</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Buddhism" name="Religion" id="Buddhism"> Buddhism</a>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle b1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Origin
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Bengali" name="Origin" id="Bengali"> Bengali</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Sikh" name="Origin" id="Sikh"> Sikh</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Rajastani" name="Origin" id="Rajastani"> Rajastani</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Bangla" name="Origin" id="Bangla"> Bangla</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Kannada" name="Origin" id="Kannada"> Kannada</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="South Indian" name="Origin" id="South Indian"> South Indian</a>
+              </div>
+                </div>
+              </td>
+              <td>
+                <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle b1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Rashi
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Dhanu" name="Rashi" id="Dhanu"> Dhanu</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Kanya" name="Rashi" id="Kanya"> Kanya</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Kumbha" name="Rashi" id="Kumbha"> Kumbha</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Karka" name="Rashi" id="Karka"> Karka</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="kanya" name="Rashi" id="Kanya"> Kanya</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Makar" name="Rashi" id="Makar"> Makar</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Meena" name="Rashi" id="Meena"> Meena</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Tula" name="Rashi" id="Tula"> Tula</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Vruschika" name="Rashi" id="Vruschika"> Vruschika</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <br>
+          <table align="center">
+            <tr>
+              <td>
+                <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle b1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Nakshtra
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Anuradha" name="Nakshtra" id="Anuradha"> Anuradha</a>  
+       <a class="dropdown-item" href="#"><input type="checkbox" value="Arudha" name="Nakshtra" id="Arudha"> Arudha</a>
+       <a class="dropdown-item" href="#"><input type="checkbox" value="Ashlesha" name="Nakshtra" id="Ashlesha"> Ashlesha</a>
+        <a class="dropdown-item" href="#"><input type="checkbox" value="Aswini" name="Nakshtra" id="Aswini"> Aswini</a>
+        <a class="dropdown-item" href="#"><input type="checkbox" value="Bharani" name="Nakshtra" id="Bharani"> Bharani</a>
+        <a class="dropdown-item" href="#"><input type="checkbox" value="Chitra" name="Nakshtra" id="Chitra"> Chitra</a>
+        <a class="dropdown-item" href="#"><input type="checkbox" value="Hastha" name="Nakshtra" id="Hastha"> Hastha</a>
+        <a class="dropdown-item" href="#"><input type="checkbox" value="Jyeshta" name="Nakshtra" id="Jyeshta"> Jyeshta</a>
+        <a class="dropdown-item" href="#"><input type="checkbox" value="Krithika" name="Nakshtra" id="Krithika"> Krithika</a>
+        <a class="dropdown-item" href="#"><input type="checkbox" value="Makha" name="Nakshtra" id="Makha"> Makha</a>
+        <a class="dropdown-item" href="#"><input type="checkbox" value="Moola" name="Nakshtra" id="Moola"> Moola</a>
+       </div>
+                </div>
+
+              </td>
+              <td>
+                <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle b1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    God
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Hanuman" name="God" id="Hanuman"> Hanuman</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Muslim" name="God" id="Muslim"> Muslim</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Lord Rama" name="God" id="Lord Rama"> Lord Rama</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Ganesha" name="God" id="Ganesha"> Ganesha</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Lord Vishnu" name="God" id="Lord Vishnu"> Lord Vishnu</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Durga" name="God" id="Durga"> Durga</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Lord Krishna" name="God" id="Lord Krishna"> Lord Krishna</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Lord Shiva" name="God" id="Lord Shiva"> Lord Shiva</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Lord Arjun" name="God" id="Lord Arjun"> Lord Arjun</a>
+                    <a class="dropdown-item" href="#"><input type="checkbox" value="Sikh" name="God" id="Sikh"> Sikh</a>
+                    </div>
+                </div>
+
+              </td>
+              <td>
+                <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle b1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Start With
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-items"><table>
+                    <tr>
+                      <td><input type="checkbox" name="A"> A&nbsp;&nbsp;</td>
+                      <td><input type="checkbox" name="B"> B&nbsp;&nbsp;</td>
+                      <td><input type="checkbox" name="C"> C&nbsp;&nbsp;</td>
+                      <td><input type="checkbox" name="D"> D&nbsp;&nbsp;</td>
+                      <td><input type="checkbox" name="E"> E&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr>
+                     <td><input type="checkbox" name="F"> F&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="G"> G&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="H"> H&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="I"> I&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="J"> J&nbsp;&nbsp;</td>
+                   </tr>
+                   <tr>
+                     <td><input type="checkbox" name="k"> k&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="L"> L&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="M"> M&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="N"> N&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="O"> O&nbsp;&nbsp;</td>
+                   </tr>
+                   <tr>
+                     <td><input type="checkbox" name="P"> P&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="Q"> Q&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="R"> R&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="S"> S&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="T"> T&nbsp;&nbsp;</td>
+                   </tr>
+                   <tr>
+                     <td><input type="checkbox" name="U"> U&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="V"> V&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="W"> W&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="X"> X&nbsp;&nbsp;</td>
+                     <td><input type="checkbox" name="Y"> Y&nbsp;&nbsp;</td>
+         
+                   </tr>
+                   <tr>
+                     <td><input type="checkbox" name="Z"> Z&nbsp;&nbsp;</td>
+                   </tr>
+                  </table></a>
+                  </div>
+         
+
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn b1 btn-default font-weight-bold" >Submit</button>
+
+          <button type="button" class="btn b1 btn-default font-weight-bold" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+  </script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
